@@ -3,6 +3,7 @@
   "slave": {
     "master": "ws://192.168.200.11:8020?password=super_secure_password"
   },
+  "cluster": 1,
   "port": 8017,
   "log": {
     "stdout": true,
