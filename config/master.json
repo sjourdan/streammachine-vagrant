@@ -1,4 +1,5 @@
 {
+  "mode": "master",
   "source_port": 8002,
   "master": {
     "port": 8020,
@@ -7,11 +8,19 @@
   "log": {
     "stdout": true,
     "json": {
-      "file": "/var/log/streammachine.log",
+      "file": "/var/log/streammachine/streammachine.log",
       "level": "info"
     }
   },
-  "redis": {
-    "server": "redis://192.168.200.13:6379"
+  "streams": {
+    "test": {
+      "key": "test",
+      "root_route": true,
+      "format": "mp3",
+      "seconds": 3600,
+      "metaTitle": "Testing",
+      "host": "localhost",
+      "source_password": "testing"
+    }
   }
 }
