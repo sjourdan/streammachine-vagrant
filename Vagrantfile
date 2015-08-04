@@ -57,6 +57,14 @@ Vagrant.configure(2) do |config|
       sudo npm install
     SHELL
     slave.vm.network :private_network, ip: "192.168.200.12"
+    slave.vm.provider 'vmware_fusion' do |v|
+      # v.vmx['numvcpus'] = 2
+      v.vmx['memsize'] = 512
+    end
+    slave.vm.provider 'virtualbox' do |v|
+      v.customize ['modifyvm', :id, '--memory', '512']
+      # v.customize ['modifyvm', :id, '--cpus', '2']
+    end
   end
 
   config.vm.define "redis" do |redis|
