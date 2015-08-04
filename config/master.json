@@ -1,0 +1,17 @@
+{
+  "source_port": 8002,
+  "master": {
+    "port": 8020,
+    "password": "super_secure_password"
+  },
+  "log": {
+    "stdout": true,
+    "json": {
+      "file": "/var/log/streammachine.log",
+      "level": "info"
+    }
+  },
+  "redis": {
+    "server": "redis://192.168.200.13:6379"
+  }
+}
