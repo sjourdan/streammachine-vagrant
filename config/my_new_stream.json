@@ -1,0 +1,9 @@
+{
+  "key": "my_new_stream",
+  "root_route": true,
+  "format": "mp3",
+  "seconds": 3600,
+  "metaTitle": "Testing",
+  "host": "localhost",
+  "source_password": "testing123"
+}

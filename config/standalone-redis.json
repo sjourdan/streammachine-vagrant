@@ -6,16 +6,5 @@
   },
   "redis": {
     "server": "redis://192.168.200.13:6379"
-  },
-  "streams": {
-    "test": {
-      "key": "test",
-      "root_route": true,
-      "format": "mp3",
-      "seconds": 3600,
-      "metaTitle": "Testing",
-      "host": "localhost",
-      "source_password": "testing"
-    }
   }
 }

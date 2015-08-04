@@ -39,6 +39,16 @@ Start the standalone VM:
     cd /srv/StreamMachine
     sudo ./streammachine-cmd --config /vagrant/config/standalone-redis.json
 
+Create the stream named `my_new_stream`:
+
+    $ curl -F 'key=my_new_stream' http://192.168.200.10:8001/api/streams
+
+Feed the base configuration found under `config/my_new_stream.json`:
+
+    $ curl -H "Content-Type: application/json" -H 'Accept: application/json' -X PUT --data @config/my_new_stream.json http://192.168.200.10:8001/api/streams/my_new_stream/config
+
+Redis is now the backend storage for StreamMachine configuration.
+
 ### Standalone Usage
 
 You can now stream (ie. icecast2) to `192.168.200.10:8002` using the test credentials and listen to the stream on `http://192.168.200.10:8001/test` (or use an HLS-enabled device like Safari and use http://192.168.200.10:8001/test.m3u8)
