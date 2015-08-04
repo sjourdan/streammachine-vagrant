@@ -41,7 +41,7 @@ Start the standalone VM:
 
 ### Standalone Usage
 
-You can now stream to 192.168.200.10:8002 and listen to the stream on 192.168.200.10:8001
+You can now stream (ie. icecast2) to `192.168.200.10:8002` using the test credentials and listen to the stream on `192.168.200.10:8001` (or use an HLS-enabled device like Safari and use http://192.168.200.10:8001/test.m3u8)
 
 ## Master StreamMachine
 
