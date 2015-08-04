@@ -41,7 +41,7 @@ Start the standalone VM:
 
 ### Standalone Usage
 
-You can now stream (ie. icecast2) to `192.168.200.10:8002` using the test credentials and listen to the stream on `192.168.200.10:8001` (or use an HLS-enabled device like Safari and use http://192.168.200.10:8001/test.m3u8)
+You can now stream (ie. icecast2) to `192.168.200.10:8002` using the test credentials and listen to the stream on `http://192.168.200.10:8001/test` (or use an HLS-enabled device like Safari and use http://192.168.200.10:8001/test.m3u8)
 
 ## Master StreamMachine
 
@@ -55,6 +55,8 @@ Start the master VM:
     $ vagrant ssh master
     cd /srv/StreamMachine
     sudo ./streammachine-cmd --config /vagrant/config/master.json
+
+You can now stream (ie. icecast2) to `192.168.200.11:8002` using the test credentials. You'll need a slave service to listen to the stream.
 
 ## Slave StreamMachine
 
