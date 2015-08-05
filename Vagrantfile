@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   # config.vm.box = "chef/ubuntu-14.04"
 
-  config.vm.define "standalone" do |standalone|
+  config.vm.define "standalone", primary: true do |standalone|
     standalone.vm.box = "chef/ubuntu-14.04"
     standalone.vm.provision "shell", inline: <<-SHELL
       sudo apt-get update
